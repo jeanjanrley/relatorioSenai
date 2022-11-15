@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js" type="text/javascript"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<h1>Indicadores Mensais</h1>
+		</header>
+		<main>
+			<div class="content-area">
+				<h2>Desempenho por região</h2>
+				<p>
+					As regiões estão organizadas por lucro do maior para o menor e entre parenteses está a quantidade de
+					intes vendidos.
+				</p>
+				<div class="container">
+					<div class="content-item">
+						<div class="item-header big">
+							<h3>Este</h3>
+							<p>R$ 307.556,50 (1530)</p>
+						</div>
+						<div class="item-body">
+							<ul>
+								<li>
+									<div>Desktop CPU</div>
+									<div class="price">R$ 261.359,63</div>
+								</li>
+								<li>
+									<div>17" Monitor</div>
+									<div class="price">R$ 41.142,14</div>
+								</li>
+								<li>
+									<div>101 Keyboard</div>
+									<div class="price">R$ 3.787,51</div>
+								</li>
+								<li>
+									<div>PC Mouse</div>
+									<div class="price">R$ 1.267,23</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="content-item">
+						<div class="item-header big">
+							<h3>Norte</h3>
+							<p>R$ 114.497,49 (882)</p>
+						</div>
+						<div class="item-body">
+							<ul>
+								<li>
+									<div>Desktop CPU</div>
+									<div>R$ 97.047,29</div>
+								</li>
+								<li>
+									<div>17" Monitor</div>
+									<div>R$ 12.592,71</div>
+								</li>
+								<li>
+									<div>101 Keyboard</div>
+									<div>R$ 3.886,06</div>
+								</li>
+								<li>
+									<div>PC Mouse</div>
+									<div>R$ 971,43</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="content-item">
+						<div class="item-header big">
+							<h3>Sul</h3>
+							<p>R$ 110.259,67 (763)</p>
+						</div>
+						<div class="item-body">
+							<ul>
+								<li>
+									<div>Desktop CPU</div>
+									<div>R$ 89.882,21</div>
+								</li>
+								<li>
+									<div>17" Monitor</div>
+									<div>R$ 17.651,32</div>
+								</li>
+								<li>
+									<div>101 Keyboard</div>
+									<div>R$ 2.090,96</div>
+								</li>
+								<li>
+									<div>PC Mouse</div>
+									<div>R$ 635,18</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-area">
+				<h2>Desempenho por item</h2>
+				<p>
+					Os itens estão organizadas por lucro do maior para o menor e entre parenteses está a quantidade de
+					intes vendidos.
+				</p>
+				<div class="container">
+					<div class="content-item">
+						<div class="item-header">
+							<h3>Desktop CPU</h3>
+							<p>R$ 448.289,13 (981)</p>
+						</div>
+					</div>
+					<div class="content-item">
+						<div class="item-header">
+							<h3>17" Monitor</h3>
+							<p>R$ 71.386,17 (609)</p>
+						</div>
+					</div>
+					<div class="content-item">
+						<div class="item-header">
+							<h3>101 Keyboard</h3>
+							<p>R$ 9.764,53 (917)</p>
+						</div>
+					</div>
+					<div class="content-item">
+						<div class="item-header">
+							<h3>PC Mouse</h3>
+							<p>R$ 2.873,85 (670)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-area graphic-area">
+				<div class="content">
+					<h2>Produto X Região</h2>
+					<p>Você pode clicar nas caixas abaixo para filtrar itens</p>
+					<div class="chart-container">
+						<canvas id="regionProducts"></canvas>
+					</div>
+				</div>
+				<div class="content">
+					<h2>Produto X Loja</h2>
+					<p>Você pode clicar nas caixas abaixo para filtrar itens</p>
+					<div class="chart-container">
+						<canvas id="storeProducts"></canvas>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="config.js"></script>
+	<script>
+		const fisrtChart = new Chart(
+			document.getElementById('regionProducts'),
+			regionConfig
+		);
+		const secondChart = new Chart(
+			document.getElementById('storeProducts'),
+			sotreConfig
+		);
+	</script>
+</body>
+
+</html>
